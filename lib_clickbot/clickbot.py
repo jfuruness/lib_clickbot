@@ -241,7 +241,11 @@ class Clickbot:
 
         self.logger.info("Moved to {}, {}".format(x, y))
         if len(self.box) <= 1:
-            self.box.append(self.mouse.position)
+            if len(self.box) > 0:
+                if self.box[-1] != self.mouse.position:
+                    self.box.append(self.mouse.position)
+            else:
+                self.box.append(self.mouse.position)
         else:
             return False
 
