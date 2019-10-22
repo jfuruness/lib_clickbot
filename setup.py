@@ -3,15 +3,17 @@ from setuptools import setup, find_packages
 setup(
     name='lib_clickbot',
     packages=find_packages(),
-    version='0.1.00',
+    version='0.1.1',
     author='Justin Furuness',
     author_email='jfuruness@gmail.com',
     url='https://github.com/jfuruness/lib_clickbot.git',
     download_url='https://github.com/jfuruness/lib_clickbot.git',
-    keywords=['Furuness', 'furuness', 'pypi', 'package'],  # arbitrary keywords
+    keywords=['Furuness', 'furuness', 'pypi', 'package', 'clickbot'],  # arbitrary keywords
     test_suite='nose.collector',
     tests_require=['nose'],
     install_requires=[
+        'setuptools>=40.8.0',
+        'pynput>=1.4.4'
     ],
     classifiers=[
         'Environment :: Console',
